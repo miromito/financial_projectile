@@ -17,7 +17,7 @@ class FinancialModel:
     @staticmethod
     def update_rental_income(rental_income, apartments_repair_time, rent_income_per_apartment):
         """Update rental income based on apartment repair time."""
-        if apartments_repair_time == 36:  # Apartment repair completed
+        if apartments_repair_time == 8:  # Apartment repair completed
             return rental_income + rent_income_per_apartment
         return rental_income
 
