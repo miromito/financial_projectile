@@ -73,7 +73,7 @@ class FinancialModel:
 
     def calculate_monthly_finances(self):
         self.current_month_income = ((self.salary_monthly_income - self.salary_monthly_income * self.income_tax)
-                                + self.rental_income)
+                                     + self.rental_income)
         month_savings = self.current_month_income - self.monthly_expenses
         self.savings += month_savings
 
