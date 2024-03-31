@@ -47,7 +47,10 @@ function simulate() {
             <p>Age: ${totalInfo.Age}</p>
             <p>Savings: ${totalInfo.Savings}</p>
             <p>Monthly Income after Tax: ${totalInfo['Monthly Income']}</p>
-            <p>Rental Income: ${totalInfo['Rental Income']}</p>`;
+            <p>Rental Income: ${totalInfo['Rental Income']}</p>
+            <p>Apts Constructed: ${totalInfo['Apartments Constructed Owned']}</p>
+            <p>Apts In Construction: ${totalInfo['Apartments in Construction Owned']}</p>
+`;
 
         // Create the details table
         const detailsDiv = document.createElement('div');
