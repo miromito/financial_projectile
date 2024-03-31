@@ -13,7 +13,7 @@ function simulate() {
     const apartmentRepairCost = document.getElementById('apartment_repair_cost').value;
 
     // Making a POST request to the server with the collected data
-    fetch('http://127.0.0.1:5000/simulate', {
+    fetch('/simulate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

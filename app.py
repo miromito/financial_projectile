@@ -1,9 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS  # Import CORS
 from financial_model import FinancialModel
 
 app = Flask(__name__)
 CORS(app=app, resources={r"*": {"origins": "*"}})
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/simulate', methods=['POST'])
@@ -13,7 +18,7 @@ def simulate():
         current_age=int(data['current_age']),
         target_age=int(data['target_age']),
         salary_monthly_income=int(data['salary_monthly_income']),
-        income_tax=float(data['salary_tax'])/100,
+        income_tax=float(data['salary_tax']) / 100,
         monthly_expenses=int(data['monthly_expenses']),
         savings=int(data['savings']),
         apartment_construction_time=int(data['apartment_construction_time_months']),
