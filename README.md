@@ -14,6 +14,10 @@ To run this project, ensure you have Python 3.x installed on your system.
 
 ## How to Use
 Modify the `main.py` file with your personal financial information including current age, target age, monthly income, expenses, and mortgages.
+Then run 
+
+`python main.py`
+
 
 The program will output your financial status at each interval considering your inputs.
 
