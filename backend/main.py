@@ -34,4 +34,4 @@ financial_plan = FinancialModel(
     apartment_repair_cost=apartment_repair_cost,
 
 )
-financial_plan.simulate()
+print(financial_plan.simulate())

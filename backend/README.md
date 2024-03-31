@@ -24,12 +24,22 @@ To run this project, ensure you have Python 3.x installed on your system.
 
 
 ## How to Use
+#### Via flask:
+run 
+`python backend/app.py`
+
+then open `frontend/index.html`
+
+
+That's it.
+
+#### Alternatively:
 Modify the `main.py` file with your personal financial information including current age, target age, monthly income, expenses, and mortgages.
 Then run 
 
-`python main.py`
+`python backend/main.py`
 
-
+## Parameters
 To get the most out of this financial model, you'll start by setting some key information about your finances and goals. Here's what you need to know about each initial parameter:
 
 current_age: This is your starting age. The model uses this to calculate how long it will simulate your financial growth, all the way up to your retirement.

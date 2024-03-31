@@ -7,12 +7,15 @@ class FinancialModel:
                  apartment_construction_time: int,
                  savings: int,
                  apartment_repair_cost: int,
-                 mortgages,
                  black_day_savings_target: int,
                  apartment_cost: int,
                  rent_income_per_apartment: int,
+
+                 mortgages=None,
                  income_tax: float = 0.02,
                  ):
+        if mortgages is None:
+            mortgages = []
         self.current_age = current_age
         self.target_age = target_age
         self.salary_monthly_income = salary_monthly_income
@@ -36,12 +39,29 @@ class FinancialModel:
         self.apartments_repair_time = 0
 
     def simulate(self):
+        results = []
         for month in range(self.months_until_target_age):
             self.update_rental_income()
             self.calculate_monthly_finances()
             self.process_mortgages()
             self.check_for_new_apartment()
-            self.print_financial_status(month)
+
+            # Collecting data instead of printing
+            month_result = {
+                'Age': self.current_age + month // 12,
+                'Savings': round(self.savings),
+                'Monthly Income': round(self.current_month_income),
+                'Rental Income': self.rental_income,
+                'Apartments Constructed Owned': len(
+                    [x for x in self.mortgages if x["paid"] and x["month_to_complete"] <= 0]),
+                'Apartments in Construction Owned': len(
+                    [x for x in self.mortgages if x["paid"] and x["month_to_complete"] > 0]),
+                'Mortgages Owned': len([x for x in self.mortgages if not x["paid"]]),
+                'Apartment Repair Time': self.apartments_repair_time,
+            }
+            results.append(month_result)
+
+        return results
 
     def update_rental_income(self):
         if self.apartments_repair_time != 0:

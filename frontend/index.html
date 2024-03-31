@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Model Simulator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<h1>Financial Model Simulator</h1>
+<div class="form-container">
+    <form id="financialModelForm">
+        <div class="input-group">
+            <label for="current_age">Current Age:</label>
+            <input type="number" id="current_age" value="33" placeholder="Current Age">
+        </div>
+
+        <div class="input-group">
+            <label for="target_age">Target Age:</label>
+            <input type="number" id="target_age" value="55" placeholder="Target Age">
+        </div>
+
+        <div class="input-group">
+            <label for="salary_monthly_income">Monthly Income:</label>
+            <input type="number" id="salary_monthly_income" value="3000" placeholder="Monthly Income">
+        </div>
+
+        <div class="input-group">
+            <label for="salary_tax">Tax (%):</label>
+            <input type="number" id="salary_tax" value="2" placeholder="Tax">
+        </div>
+
+        <div class="input-group">
+            <label for="monthly_expenses">Monthly Expenses:</label>
+            <input type="number" id="monthly_expenses" value="2000" placeholder="Monthly Expenses">
+        </div>
+
+        <div class="input-group">
+            <label for="savings">Initial Savings:</label>
+            <input type="number" id="savings" value="0" placeholder="Initial Savings">
+        </div>
+
+        <div class="input-group">
+            <label for="apartment_construction_time_months">Apt Construction (Months):</label>
+            <input type="number" id="apartment_construction_time_months" value="48" placeholder="Apartment Construction Time">
+        </div>
+
+        <div class="input-group">
+            <label for="black_day_savings_target">Savings for a Rainy Day:</label>
+            <input type="number" id="black_day_savings_target" value="20000" placeholder="Target for Savings for a Rainy Day">
+        </div>
+
+        <div class="input-group">
+            <label for="rent_income_per_apartment">Rent Income per Apartment:</label>
+            <input type="number" id="rent_income_per_apartment" value="500" placeholder="Target Rent Income per Apartment">
+        </div>
+
+        <div class="input-group">
+            <label for="apartment_cost">1-bedroom Apartment Cost:</label>
+            <input type="number" id="apartment_cost" value="38000" placeholder="1-bedroom Apartment Cost">
+        </div>
+
+        <div class="input-group">
+            <label for="apartment_repair_cost">Apartment Repair Cost:</label>
+            <input type="number" id="apartment_repair_cost" value="12000" placeholder="Cost of repair per Apartment">
+        </div>
+
+        <button type="button" onclick="simulate()">Simulate</button>
+    </form>
+</div>
+<div class="results-container" id="results">
+
+</div>
+
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
