@@ -408,3 +408,7 @@ thead th:nth-last-of-type(1) > div > * {
 	position: relative;
 	z-index: 4;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
