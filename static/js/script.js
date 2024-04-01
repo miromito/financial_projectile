@@ -61,7 +61,7 @@ function simulate() {
         thead.innerHTML = `<tr>
                 <th>Age</th>
                 <th>Total Savings</th>
-                <th>Monthly Income minus Expenses</th>
+                <th>Monthly Income after Tax</th>
                 <th>Rental Income</th>
                 <th>Apts Owned</th>
                 <th>Apts in Construction</th>
