@@ -25,13 +25,11 @@ To run this project, ensure you have Python 3.x installed on your system.
 
 ## How to Use
 #### Via flask:
-run 
-`python backend/app.py`
+1. Create virtual environment `python3 -v venv env`
+2. Activate it `source env/bin/activate`
+3. install dependencies `pip install -r requirements.txt`
+4. run `python app.py`
 
-then open `frontend/index.html`
-
-
-That's it.
 
 #### Alternatively:
 Modify the `main.py` file with your personal financial information including current age, target age, monthly income, expenses, and mortgages.
