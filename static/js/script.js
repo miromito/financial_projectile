@@ -73,11 +73,11 @@ function simulate() {
 
 			// Create the details table
 			const detailsDiv = document.createElement("div");
-            detailsDiv.className = "limiter";
-            
+			detailsDiv.className = "limiter";
+
 			const containerDiv = document.createElement("div");
-            containerDiv.className = "container-table100";
-            containerDiv.style.display = "none"; // Hide the table initially
+			containerDiv.className = "container-table100";
+			containerDiv.style.display = "none"; // Hide the table initially
 			const wrapDiv = document.createElement("div");
 			wrapDiv.className = "wrap-table100";
 			const tableDiv = document.createElement("div");
@@ -156,7 +156,6 @@ function simulate() {
 			// Create the canvas for the chart
 			const canvas = document.createElement("canvas");
 			canvas.id = "savingsChart";
-		
 
 			// Append the chart and details table to resultsDiv
 			resultsDiv.appendChild(canvas);
@@ -208,9 +207,9 @@ function simulate() {
 						},
 					],
 				},
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
 					scales: {
 						x: {
 							title: {

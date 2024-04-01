@@ -12,16 +12,20 @@
 			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
-        <link href="https://colorlib.com/etc/tb/Table_Highlight_Vertical_Horizontal/css/util.css" rel="stylesheet"/>
-        
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://colorlib.com/etc/tb/Table_Highlight_Vertical_Horizontal/css/util.css"
+			rel="stylesheet"
+		/>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body>
 		<div class="form-container">
 			<form id="financialModelForm">
 				<h1>Financial Model Simulator</h1>
-
 				<div class="input__form">
 					<div class="input__field">
 						<input
@@ -35,7 +39,6 @@
 						/>
 						<label class="input__label" for="current_age">Current Age:</label>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -48,7 +51,6 @@
 						/>
 						<label class="input__label" for="target_age">Target Age:</label>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -63,7 +65,6 @@
 							>Monthly Income:</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -76,7 +77,6 @@
 						/>
 						<label class="input__label" for="salary_tax">Tax (%):</label>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -91,7 +91,6 @@
 							>Monthly Expenses:</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -104,7 +103,6 @@
 						/>
 						<label class="input__label" for="savings">Initial Savings:</label>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -119,7 +117,6 @@
 							>Apt Construction (Months):</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -134,7 +131,6 @@
 							>Savings for a Rainy Day:</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -149,7 +145,6 @@
 							>Rent Income per Apartment:</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -164,7 +159,6 @@
 							>1-bedroom Apartment Cost:</label
 						>
 					</div>
-
 					<div class="input__field">
 						<input
 							class="input__input-textbox"
@@ -185,39 +179,38 @@
 			</form>
 		</div>
 		<div class="results-container" id="results"></div>
-
 		<script src="../static/js/script.js"></script>
 		<!-- Link to your JavaScript file -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>(function ($) {
-	"use strict";
-	$(".column100").on("mouseover", function () {
-		var table1 = $(this).parent().parent().parent();
-		var table2 = $(this).parent().parent();
-		var verTable = $(table1).data("vertable") + "";
-		var column = $(this).data("column") + "";
-		$(table2)
-			.find("." + column)
-			.addClass("hov-column-" + verTable);
-		$(table1)
-			.find(".row100.head ." + column)
-			.addClass("hov-column-head-" + verTable);
-	});
-	$(".column100").on("mouseout", function () {
-		var table1 = $(this).parent().parent().parent();
-		var table2 = $(this).parent().parent();
-		var verTable = $(table1).data("vertable") + "";
-		var column = $(this).data("column") + "";
-		$(table2)
-			.find("." + column)
-			.removeClass("hov-column-" + verTable);
-		$(table1)
-			.find(".row100.head ." + column)
-			.removeClass("hov-column-head-" + verTable);
-	});
-})(jQuery);
-</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script>
+			(function ($) {
+				"use strict";
+				$(".column100").on("mouseover", function () {
+					var table1 = $(this).parent().parent().parent();
+					var table2 = $(this).parent().parent();
+					var verTable = $(table1).data("vertable") + "";
+					var column = $(this).data("column") + "";
+					$(table2)
+						.find("." + column)
+						.addClass("hov-column-" + verTable);
+					$(table1)
+						.find(".row100.head ." + column)
+						.addClass("hov-column-head-" + verTable);
+				});
+				$(".column100").on("mouseout", function () {
+					var table1 = $(this).parent().parent().parent();
+					var table2 = $(this).parent().parent();
+					var verTable = $(table1).data("vertable") + "";
+					var column = $(this).data("column") + "";
+					$(table2)
+						.find("." + column)
+						.removeClass("hov-column-" + verTable);
+					$(table1)
+						.find(".row100.head ." + column)
+						.removeClass("hov-column-head-" + verTable);
+				});
+			})(jQuery);
+		</script>
 	</body>
 </html>
