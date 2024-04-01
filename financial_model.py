@@ -51,7 +51,7 @@ class FinancialModel:
             apartments_in_construction_owned = len(
                 [x for x in self.mortgages if x["paid"] and x["month_to_complete"] > 0])
             total_value = round(
-                (apartments_in_construction_owned + apartments_constructed_owned) * self.apartment_cost + self.savings)
+                (apartments_in_construction_owned + apartments_constructed_owned) * (self.apartment_cost + self.apartment_cost * 0.3) + self.savings)
 
             # Collecting data instead of printing
             month_result = {

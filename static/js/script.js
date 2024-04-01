@@ -50,7 +50,7 @@ function simulate() {
             <p>Rental Income: ${totalInfo['Rental Income']}</p>
             <p>Apts Constructed: ${totalInfo['Apartments Constructed Owned']}</p>
             <p>Apts In Construction: ${totalInfo['Apartments in Construction Owned']}</p>
-            <p>Total Value: ${totalInfo['Total Value']}</p>
+            <p>Total Value (30% increase for apts): ${totalInfo['Total Value']}</p>
 `;
 
         // Create the details table
