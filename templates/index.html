@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Model Simulator</title>
-    <link rel="stylesheet" href="../static/css/style.css"> <!-- Link to your CSS file -->
-</head>
-<body>
-<h1>Financial Model Simulator</h1>
-<div class="form-container">
-    <form id="financialModelForm">
-        <div class="input-group">
-            <label for="current_age">Current Age:</label>
-            <input type="number" id="current_age" value="33" placeholder="Current Age"
-                   title="Enter your current age in years.">
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Financial Model Simulator</title>
+		<link rel="stylesheet" href="../static/css/style.css" />
+		<!-- Link to your CSS file -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
 
-        <div class="input-group">
-            <label for="target_age">Target Age:</label>
-            <input type="number" id="target_age" value="55" placeholder="Target Age"
-                   title="Enter the age you plan to retire at.">
-        </div>
+		<div class="form-container">
+            		<h1>Financial Model Simulator</h1>
 
-        <div class="input-group">
-            <label for="salary_monthly_income">Monthly Income:</label>
-            <input type="number" id="salary_monthly_income" value="3000" placeholder="Monthly Income"
-                   title="Enter your typical monthly income in USD before taxes.">
-        </div>
+			<form id="financialModelForm">
 
-        <div class="input-group">
-            <label for="salary_tax">Tax (%):</label>
-            <input type="number" id="salary_tax" value="2" placeholder="Tax"
-                   title="Enter the percentage of your income that goes towards taxes.">
-        </div>
+                
 
-        <div class="input-group">
-            <label for="monthly_expenses">Monthly Expenses:</label>
-            <input type="number" id="monthly_expenses" value="2000" placeholder="Monthly Expenses"
-                   title="Enter your average monthly expenses in USD.">
-        </div>
 
-        <div class="input-group">
-            <label for="savings">Initial Savings:</label>
-            <input type="number" id="savings" value="0" placeholder="Initial Savings"
-                   title="Enter the amount of money you have saved up until now in USD.">
-        </div>
+				<div class="input__form">
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="current_age" value="33" placeholder=" " title="Enter your current age in years." autocomplete="off">
+        <label class="input__label" for="current_age">Current Age:</label>
+    </div>
 
-        <div class="input-group">
-            <label for="apartment_construction_time_months">Apt Construction (Months):</label>
-            <input type="number" id="apartment_construction_time_months" value="48"
-                   placeholder="Apartment Construction Time"
-                   title="Enter the number of months it takes to construct an apartment. This is assuming that you're investing into an apartment that is not built yet.">
-        </div>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="target_age" value="55" placeholder=" " title="Enter the age you plan to retire at." autocomplete="off">
+        <label class="input__label" for="target_age">Target Age:</label>
+    </div>
 
-        <div class="input-group">
-            <label for="black_day_savings_target">Savings for a Rainy Day:</label>
-            <input type="number" id="black_day_savings_target" value="20000"
-                   placeholder="Target for Savings for a Rainy Day"
-                   title="Enter the target amount you want to save for emergencies.">
-        </div>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="salary_monthly_income" value="3000" placeholder=" " title="Enter your typical monthly income in USD before taxes." autocomplete="off">
+        <label class="input__label" for="salary_monthly_income">Monthly Income:</label>
+    </div>
 
-        <div class="input-group">
-            <label for="rent_income_per_apartment">Rent Income per Apartment:</label>
-            <input type="number" id="rent_income_per_apartment" value="500"
-                   placeholder="Target Rent Income per Apartment"
-                   title="Enter the expected monthly income from renting an apartment.">
-        </div>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="salary_tax" value="2" placeholder=" " title="Enter the percentage of your income that goes towards taxes." autocomplete="off">
+        <label class="input__label" for="salary_tax">Tax (%):</label>
+    </div>
 
-        <div class="input-group">
-            <label for="apartment_cost">1-bedroom Apartment Cost:</label>
-            <input type="number" id="apartment_cost" value="38000" placeholder="1-bedroom Apartment Cost"
-                   title="Enter the purchase cost of a 1-bedroom apartment.">
-        </div>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="monthly_expenses" value="2000" placeholder=" " title="Enter your average monthly expenses in USD." autocomplete="off">
+        <label class="input__label" for="monthly_expenses">Monthly Expenses:</label>
+    </div>
 
-        <div class="input-group">
-            <label for="apartment_repair_cost">Apartment Repair Cost:</label>
-            <input type="number" id="apartment_repair_cost" value="12000" placeholder="Cost of repair per Apartment"
-                   title="Enter the cost of repairs for an apartment. This is what you would normally spend for the repair before renting out the apartment.">
-        </div>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="savings" value="0" placeholder=" " title="Enter the amount of money you have saved up until now in USD." autocomplete="off">
+        <label class="input__label" for="savings">Initial Savings:</label>
+    </div>
 
-        <button type="button" onclick="simulate()">Simulate</button>
-    </form>
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="apartment_construction_time_months" value="48" placeholder=" " title="Enter the number of months it takes to construct an apartment. This is assuming that you're investing into an apartment that is not built yet." autocomplete="off">
+        <label class="input__label" for="apartment_construction_time_months">Apt Construction (Months):</label>
+    </div>
 
-</div>
-<div class="results-container" id="results">
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="black_day_savings_target" value="20000" placeholder=" " title="Enter the target amount you want to save for emergencies." autocomplete="off">
+        <label class="input__label" for="black_day_savings_target">Savings for a Rainy Day:</label>
+    </div>
 
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="rent_income_per_apartment" value="500" placeholder=" " title="Enter the expected monthly income from renting an apartment." autocomplete="off">
+        <label class="input__label" for="rent_income_per_apartment">Rent Income per Apartment:</label>
+    </div>
+
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="apartment_cost" value="38000" placeholder=" " title="Enter the purchase cost of a 1-bedroom apartment." autocomplete="off">
+        <label class="input__label" for="apartment_cost">1-bedroom Apartment Cost:</label>
+    </div>
+
+    <div class="input__field">
+        <input class="input__input-textbox" type="number" id="apartment_repair_cost" value="12000" placeholder=" " autocomplete="off">
+        <label class="input__label" for="apartment_repair_cost">Apartment Repair Cost:</label>
+    </div>
+    <button type="button" class="simulate"onclick="simulate()">Simulate</button>
 </div>
 
-<script src="../static/js/script.js"></script> <!-- Link to your JavaScript file -->
-</body>
+
+				
+			</form>
+		</div>
+		<div class="results-container" id="results"></div>
+
+		<script src="../static/js/script.js"></script>
+		<!-- Link to your JavaScript file -->
+	</body>
 </html>
