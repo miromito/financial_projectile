@@ -487,3 +487,5 @@ th .column100.column7 {
   padding: 12px 6px;
   max-height: 55vh;
 }
+
+::-webkit-scrollbar {  display: none;}
