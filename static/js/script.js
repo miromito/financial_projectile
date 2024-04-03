@@ -88,7 +88,7 @@ function simulate() {
 			thead.innerHTML = `<tr class="row100 head">
     <th class="column100 column1" data-column="column1">Age</th>
     <th class="column100 column2" data-column="column2">Total Savings</th>
-    <th class="column100 column3" data-column="column3">Monthly Income - Expenses</th>
+    <th class="column100 column3" data-column="column3">Monthly Income After Tax</th>
     <th class="column100 column4" data-column="column4">Rental Income</th>
     <th class="column100 column5" data-column="column5">Apts Owned</th>
     <th class="column100 column6" data-column="column6">Apts in Construction</th>
